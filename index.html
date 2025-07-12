@@ -1,0 +1,269 @@
+add more icons and animations to this <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiss Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(110, 15, 255, 0.1) 0%, rgba(0,0,0,1) 70%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px rgba(110, 15, 255, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #6e0fff 0%, rgba(110,15,255,0) 100%);
+        }
+
+        /* Work Showcase */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .project-card {
+            background: rgba(17, 17, 17, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(110, 15, 255, 0.2);
+            border: 1px solid rgba(110, 15, 255, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(110, 15, 255, 0.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(110, 15, 255, 0.3);
+        }
+
+        .social-links a:hover {
+            color: #6e0fff;
+            transform: translateY(-2px);
+        }
+
+        /* Neon Grid Background */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0px,
+                transparent 24px,
+                rgba(110, 15, 255, 0.05) 24px,
+                rgba(110, 15, 255, 0.05) 25px
+            );
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1.3rem 1.9rem;
+            background: linear-gradient(45deg, #6e0fff, #4a00e0);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.3),
+                transparent
+            );
+            transition: all 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 20px rgba(110, 15, 255, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    
+    <header>
+        <div class="container">
+            
+            <h1>Wiss</h1>
+            <h1>COMMS CLOSED</h1>
+            <p class="text-muted">Roblox Developer | skilled builder</p>
+            <div class="social-links">
+                <a href="https://x.com/devW1ss__" target = '_blank' ><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                hi im wiss im a roblox builder with over 3 years of experinece i specialize in 
+            part based and stud building also i can intergrate 3d modeling tho i am not a 3d 
+            modeler so just put in ming that i am a builder.
+            </p>
+        </div>
+    </section>
+
+    <section class="work-showcase">
+        <div class="container">
+            <h2 class="section-title">Featured Creations</h2>
+            <div class="work-grid">
+                <div class="project-card" onclick="window.location.href='/test';"style="cursor: pointer;">
+                    <h3>Fantasy Maps</h3>
+                    <p class="text-muted">strictly building
+                    </p>
+                    <div class="tech-stack">
+                        <p class="tech-tag">villages / buildings etc</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="window.location.href='/test';" style="cursor: pointer;">
+                    <h3></h3>stud and part based building
+                        <p class="text-muted">buildings</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">strictly part based </span>
+                            <span class="tech-tag"></span>
+                        </div>
+                </div>
+                <div class="project-card" onclick="window.location.href='/test';"style="cursor: pointer;">
+                    
+                    <h3>Commissions</h3>
+                    <p class="text-muted">availability</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag"></span>
+                        <span class="tech-tag">clients and groups</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Collaborate</h2>
+            <p class="text-muted">COMMS CLOSED</p>
+            <a href="https:///devW1ss__" class="btn">CLOSED</a>
+        </div>
+    </section>
+</body>
+</html>
