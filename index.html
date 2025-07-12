@@ -65,13 +65,13 @@
             font-size: 2.5rem;
             margin-bottom: 2rem;
             text-align: center;
-            position: relative;
+            position: fixed;
             display: inline-block;
         }
 
         .section-title::after {
             content: '';
-            position: absolute;
+            position: fixed;
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
@@ -227,7 +227,7 @@
 
     <section class="work-showcase">
         <div class="container">
-            <h2 class="section-title">Featured Creations</h2>
+            <h2 class="section-title">Featured Creations</h2>    
             <div class="work-grid">
                 <div class="project-card" onclick="window.location.href='/test';"style="cursor: pointer;">
                     <h3>Fantasy Maps</h3>
